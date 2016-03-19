@@ -10,6 +10,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -19,9 +20,21 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile group: 'info.movito', name: 'themoviedbapi', version:'1.3'
+}
+
+android.packagingOptions {
+    exclude 'META-INF/NOTICE' // will not include NOTICE file
+    exclude 'META-INF/NOTICE.txt' // will not include NOTICE.txt file
+    exclude 'META-INF/LICENSE' // will not incl ude LICENSE file
+    exclude 'META-INF/LICENSE.txt' // will not incl ude LICENSE.txt file
 }
