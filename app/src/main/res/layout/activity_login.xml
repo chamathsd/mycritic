@@ -8,7 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="xyz.mycritic.mycritic.LoginActivity">
+    tools:context="xyz.mycritic.mycritic.LoginActivity"
+    android:weightSum="1"
+    android:background="#39aecf">
 
     <!-- Login progress -->
     <ProgressBar
@@ -21,14 +23,16 @@
 
     <ScrollView
         android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="364dp"
+        android:layout_height="495dp"
+        android:layout_weight="0.81">
 
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -71,6 +75,13 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Need an account? Sign up here"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
     </ScrollView>
